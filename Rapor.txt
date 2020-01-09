@@ -1,0 +1,19 @@
+Kediler ortalama olarak her gün 1 kap mama yeme eğilimine sahipler. Ben evde 2 kediye sahip olduğum ve bunlar biraz 
+fazla yem yediği için her gün onlara yem koymak yorucu hale gelmişti. Üstelik yemleri çok kötü koktuğu için hem yem
+koyarken çok rahatsız oluyordum hem de yem koyduktan sonra kokusunun elimden gitmesi için 2 3 kez yıkamam gerekiyordu.
+Bu sistemi arduino projesi ile otonomlaştırmaya karar verdim.
+
+Bunun için öncelikle bir mama kabına ihtiyacım vardı. Sonra mamaların bekleyeceği hazneye,mamanın bittiğini anlamama ve
+mama bittikçe yenisini koyacak bir motor mekanizmasına sahip olmam gerekiyordu. Mukavva yardımıyla mama haznesini olutşurdum.
+Bunun altına mamanın bittiğini anlamak için TCS3200 renk sensörü yerleştirdim. Ve mamanın bitmesi durumunda haznedeki mamayı
+tabağa boşaltmamı sağlayacak ağırlığa dayanıklı SG996 metal servo motoru mama haznesinin altına yerleştirdim. Mamanın bititğini
+anlamak için tabağın dibindeki rengi ayırt etmem gerekiyordu. Bu rengi ayırt etmem tabağın dibini gördüğümü yani mama kabının
+boşaldığını ifade ediyordu. Bu yüzden sensörümün algılayabileceği renkte bir mama kabı oluşturdum.
+
+Yeşil renkten oluşan bu tabak benim renk sensörümün ayırt edebileceği kadar netti. 3 ana renk için farklı değişkenler atayarak
+sensörden gelen verilere göre anlık olarak algılanan rengi ölçtüm. Sensörüm hangi rengi o an algılıyorsa diğer renklerin 
+değişkenlerinin değerini daha az göstererek çalışıyordu. Yeşil rengin diğerlerinden daha büyük olması durumunda motoru hareket
+ettirerek mamanın aşağı düşmesini sağladım. Fakat sensörüm ucuz bir sensör olduğu için keskin bir renk ayrımı yoktu.Bu yüzden
+tek başına yeşilin büyük olması şartı bazen dolu kaba mama koymaya sebep oluyordu. Bu yüzden yeşilin anlık değerininin diğer
+renklerden belli bir miktar büyük olması şartı sağlanana kadar mama haznesini açmayacak şekilde programlayıp daha kesin sonuç-
+lar elde ettim. Bu sayede sadece 2-3 günde bir kez mama haznesini doldurmak haricinde yapmam gereken hiçbir şey kalmadı.
